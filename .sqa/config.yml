@@ -2,9 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.1.0
+      branch: 1.4.0-alpha
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
+      branch: main
       repo: https://github.com/lisc-tools/lisc
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -14,32 +15,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-teal-manatee.sh
-        container: qc.acc_cheeky-linen-dalmatian
+        - /usr/bin/env sh .sqa/script.frumpy-smalt-reindeer.sh
+        container: qc.acc_hazy-coral-toucan
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-scarlet-ibis.sh
-        container: qc.doc_tasty-sangria-koala
+        - /usr/bin/env sh .sqa/script.frumpy-cardinal-burmese.sh
+        container: qc.doc_breezy-linen-dragonfly
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-lime-toad.sh
-        container: qc.doc_lousy-crimson-termite
+        - /usr/bin/env sh .sqa/script.squeaky-crimson-heron.sh
+        container: qc.doc_seedy-asparagus-setter
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-ecru-bordeaux.sh
-        container: qc.doc_scaly-periwinkle-camel
+        - /usr/bin/env sh .sqa/script.sleepy-rust-spider.sh
+        container: qc.doc_snoopy-rose-budgerigar
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-violet-havanese.sh
-        container: qc.lic_snappy-ultramarine-vole
+        - /usr/bin/env sh .sqa/script.pokey-magenta-liger.sh
+        container: qc.lic_clammy-olive-fowl
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-seashell-bulldog.sh
-        container: qc.met_squeaky-pumpkin-audemer
+        - /usr/bin/env sh .sqa/script.stinky-khaki-chin.sh
+        container: qc.met_slaphappy-viridian-pig
+  QC.Sec:
+    repos:
+      github.com/lisc-tools/lisc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-coral-dollar.sh
+        container: qc.sec_craggy-carmine-quetzal
+  QC.Sty:
+    repos:
+      github.com/lisc-tools/lisc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-thistle-binturong.sh
+        container: qc.sty_sunny-amber-panda
 timeout: 600
