@@ -1,0 +1,57 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.4.0-alpha
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/lisc-tools/lisc:
+      repo: https://github.com/lisc-tools/lisc
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/lisc-tools/lisc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-peach-kangaroo.sh
+        container: qc.acc_randy-orchid-vulture
+  QC.Doc:
+    repos:
+      github.com/lisc-tools/lisc find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-heliotrope-cockroach.sh
+        container: qc.doc_scanty-turquoise-dalmatian
+      github.com/lisc-tools/lisc markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-orange-malamute.sh
+        container: qc.doc_hasty-cardinal-booby
+      github.com/lisc-tools/lisc restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-orange-burmese.sh
+        container: qc.doc_boozy-chestnut-seahorse
+  QC.Lic:
+    repos:
+      github.com/lisc-tools/lisc licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-purple-scorpion.sh
+        container: qc.lic_bumpy-sangria-gar
+  QC.Met:
+    repos:
+      github.com/lisc-tools/lisc cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-pink-macaque.sh
+        container: qc.met_queasy-rust-reindeer
+  QC.Sec:
+    repos:
+      github.com/lisc-tools/lisc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-cyan-squid.sh
+        container: qc.sec_nippy-gold-caracal
+  QC.Sty:
+    repos:
+      github.com/lisc-tools/lisc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-goldenrod-shark.sh
+        container: qc.sty_fuzzy-aquamarine-sheep
+timeout: 600
