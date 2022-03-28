@@ -14,44 +14,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-celadon-sheepdog.sh
-        container: qc.acc_flabby-aquamarine-cat
+        - /usr/bin/env sh .sqa/script.geeky-celadon-skunk.sh
+        container: qc.acc_nerdy-azure-baboon
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-eggplant-hyena.sh
-        container: qc.doc_gimpy-cerulean-collie
+        - /usr/bin/env sh .sqa/script.snazzy-cobalt-eel.sh
+        container: qc.doc_trippy-crimson-rottweiler
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-lavender-lizard.sh
-        container: qc.doc_stealthy-carmine-quail
+        - /usr/bin/env sh .sqa/script.shaggy-amethyst-goat.sh
+        container: qc.doc_chewy-sangria-scorpion
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-blue-capybara.sh
-        container: qc.doc_nerdy-magnolia-toad
+        - /usr/bin/env sh .sqa/script.lanky-tomato-cheetah.sh
+        container: qc.doc_woolly-rust-stoat
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-wheat-magpie.sh
-        container: qc.lic_ugly-emerald-uguisu
+        - /usr/bin/env sh .sqa/script.homey-indigo-leopard.sh
+        container: qc.lic_geeky-chocolate-liger
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-pink-gecko.sh
-        container: qc.met_tasty-cobalt-hedgehog
+        - /usr/bin/env sh .sqa/script.stinky-ivory-rat.sh
+        container: qc.met_beady-silver-wolfhound
   QC.Sec:
     repos:
       github.com/lisc-tools/lisc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-magnolia-chicken.sh
-        container: qc.sec_fuzzy-wheat-dhole
+        - /usr/bin/env sh .sqa/script.trippy-tomato-chipmunk.sh
+        container: qc.sec_frumpy-bistre-gopher
   QC.Sty:
     repos:
       github.com/lisc-tools/lisc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-ochre-ladybird.sh
-        container: qc.sty_nippy-grey-dragon
+        - /usr/bin/env sh .sqa/script.sunny-purple-devil.sh
+        container: qc.sty_homely-crimson-opossum
 timeout: 600
