@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.1.0
+      branch: 1.4.0-alpha
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
       branch: main
@@ -15,32 +15,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-taupe-hippopotamus.sh
-        container: qc.acc_lousy-bistre-monster
+        - /usr/bin/env sh .sqa/script.scummy-coral-havanese.sh
+        container: qc.acc_ready-corn-paradise
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-pumpkin-lionfish.sh
-        container: qc.doc_breezy-orchid-bee
+        - /usr/bin/env sh .sqa/script.geeky-brown-chow.sh
+        container: qc.doc_surly-rust-spitz
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-amethyst-capybara.sh
-        container: qc.doc_sloppy-olive-quetzal
+        - /usr/bin/env sh .sqa/script.surly-carmine-jackal.sh
+        container: qc.doc_woozy-wisteria-spider
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-harlequin-chinchilla.sh
-        container: qc.doc_foggy-gold-mammoth
+        - /usr/bin/env sh .sqa/script.clammy-amethyst-ibis.sh
+        container: qc.doc_homely-cerulean-fowl
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-orchid-schnauzer.sh
-        container: qc.lic_stinky-burgundy-iguana
+        - /usr/bin/env sh .sqa/script.fuzzy-amaranth-mandrill.sh
+        container: qc.lic_paltry-amaranth-angora
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-carmine-ostrich.sh
-        container: qc.met_homely-ultramarine-booby
+        - /usr/bin/env sh .sqa/script.ready-jade-heron.sh
+        container: qc.met_smelly-gold-axolotl
+  QC.Sec:
+    repos:
+      github.com/lisc-tools/lisc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-zucchini-turtle.sh
+        container: qc.sec_trippy-amber-newt
+  QC.Sty:
+    repos:
+      github.com/lisc-tools/lisc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-cornflower-cuscus.sh
+        container: qc.sty_tasty-eggplant-axolotl
 timeout: 600
