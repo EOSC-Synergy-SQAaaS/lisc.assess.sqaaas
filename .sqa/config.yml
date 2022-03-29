@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-khaki-bulldog.sh
-        container: qc.acc_stinky-pear-catfish
+        - /usr/bin/env sh .sqa/script.tacky-bronze-kudu.sh
+        container: qc.acc_tacky-brown-pinscher
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-teal-frigatebird.sh
-        container: qc.doc_hazy-goldenrod-grasshopper
+        - /usr/bin/env sh .sqa/script.sleepy-buff-deer.sh
+        container: qc.doc_lumpy-apricot-bloodhound
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-cobalt-bison.sh
-        container: qc.doc_scanty-cerulean-booby
+        - /usr/bin/env sh .sqa/script.blurry-gold-dugong.sh
+        container: qc.doc_snazzy-malachite-mandrill
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-pumpkin-bracke.sh
-        container: qc.doc_slimy-maroon-spaniel
+        - /usr/bin/env sh .sqa/script.cloudy-vermilion-terrier.sh
+        container: qc.doc_geeky-amaranth-owl
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-harlequin-bombay.sh
-        container: qc.lic_snappy-pear-russel
+        - /usr/bin/env sh .sqa/script.skimpy-white-vulture.sh
+        container: qc.lic_lovely-fuchsia-spider
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-ruby-cassowary.sh
-        container: qc.met_beady-ochre-donkey
+        - /usr/bin/env sh .sqa/script.droopy-blue-quoll.sh
+        container: qc.met_pasty-orchid-beetle
   QC.Sec:
     repos:
       github.com/lisc-tools/lisc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-malachite-gibbon.sh
-        container: qc.sec_cranky-sapphire-jackal
+        - /usr/bin/env sh .sqa/script.slimy-heliotrope-wombat.sh
+        container: qc.sec_gimpy-ultramarine-axolotl
   QC.Sty:
     repos:
       github.com/lisc-tools/lisc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-sangria-havanese.sh
-        container: qc.sty_homey-salmon-ferret
+        - /usr/bin/env sh .sqa/script.squeaky-black-audemer.sh
+        container: qc.sty_muggy-lime-toucan
 timeout: 600
