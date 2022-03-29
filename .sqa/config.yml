@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-tan-dolphin.sh
-        container: qc.acc_homely-rust-seal
+        - /usr/bin/env sh .sqa/script.goopy-taupe-hippopotamus.sh
+        container: qc.acc_lousy-bistre-monster
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-smalt-hyena.sh
-        container: qc.doc_flimsy-gold-armadillo
+        - /usr/bin/env sh .sqa/script.surly-pumpkin-lionfish.sh
+        container: qc.doc_breezy-orchid-bee
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-seashell-bird.sh
-        container: qc.doc_thirsty-magnolia-dogfish
+        - /usr/bin/env sh .sqa/script.cranky-amethyst-capybara.sh
+        container: qc.doc_sloppy-olive-quetzal
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-peach-ostrich.sh
-        container: qc.doc_boozy-alizarin-iguana
+        - /usr/bin/env sh .sqa/script.stuffy-harlequin-chinchilla.sh
+        container: qc.doc_foggy-gold-mammoth
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-celadon-spider.sh
-        container: qc.lic_foggy-mauve-booby
+        - /usr/bin/env sh .sqa/script.ugly-orchid-schnauzer.sh
+        container: qc.lic_stinky-burgundy-iguana
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-olivine-birman.sh
-        container: qc.met_fuzzy-plum-hamster
+        - /usr/bin/env sh .sqa/script.flimsy-carmine-ostrich.sh
+        container: qc.met_homely-ultramarine-booby
 timeout: 600
