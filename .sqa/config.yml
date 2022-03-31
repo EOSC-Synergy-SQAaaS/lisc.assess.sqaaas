@@ -5,7 +5,6 @@ config:
       branch: 1.4.0-alpha
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
-      branch: main
       repo: https://github.com/lisc-tools/lisc
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,44 +14,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-magenta-donkey.sh
-        container: qc.acc_lanky-alizarin-bee
+        - /usr/bin/env sh .sqa/script.nerdy-fuchsia-wasp.sh
+        container: qc.acc_zippy-zucchini-toucan
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-seashell-kingfisher.sh
-        container: qc.doc_leaky-pumpkin-monkey
+        - /usr/bin/env sh .sqa/script.snappy-myrtle-tarantula.sh
+        container: qc.doc_goopy-ochre-wolfhound
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-cobalt-pig.sh
-        container: qc.doc_lumpy-magenta-koala
+        - /usr/bin/env sh .sqa/script.paltry-silver-rattlesnake.sh
+        container: qc.doc_crabby-bronze-mouse
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-flax-paradise.sh
-        container: qc.doc_sleazy-taupe-flounder
+        - /usr/bin/env sh .sqa/script.skimpy-lime-hornet.sh
+        container: qc.doc_droopy-malachite-fousek
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-cardinal-sheepdog.sh
-        container: qc.lic_stinky-sepia-wildebeest
+        - /usr/bin/env sh .sqa/script.chewy-ruby-barb.sh
+        container: qc.lic_sickly-celadon-lemur
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-zucchini-newt.sh
-        container: qc.met_clammy-cream-llama
+        - /usr/bin/env sh .sqa/script.breezy-celadon-kiwi.sh
+        container: qc.met_scanty-viridian-newt
   QC.Sec:
     repos:
       github.com/lisc-tools/lisc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-dandelion-gibbon.sh
-        container: qc.sec_freaky-olive-malamute
+        - /usr/bin/env sh .sqa/script.snazzy-ecru-beetle.sh
+        container: qc.sec_cranky-seashell-tzu
   QC.Sty:
     repos:
       github.com/lisc-tools/lisc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-ultramarine-ocelot.sh
-        container: qc.sty_cozy-lavender-centipede
+        - /usr/bin/env sh .sqa/script.hasty-cerise-moose.sh
+        container: qc.sty_beady-violet-spider
 timeout: 600
