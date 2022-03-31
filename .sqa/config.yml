@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.4.0-alpha
+      branch: release/1.1.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
       repo: https://github.com/lisc-tools/lisc
@@ -14,44 +14,32 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-fuchsia-wasp.sh
-        container: qc.acc_zippy-zucchini-toucan
+        - /usr/bin/env sh .sqa/script.chummy-azure-scorpion.sh
+        container: qc.acc_nerdy-plum-olm
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-myrtle-tarantula.sh
-        container: qc.doc_goopy-ochre-wolfhound
+        - /usr/bin/env sh .sqa/script.slaphappy-wheat-zorse.sh
+        container: qc.doc_hilly-fuchsia-badger
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-silver-rattlesnake.sh
-        container: qc.doc_crabby-bronze-mouse
+        - /usr/bin/env sh .sqa/script.lousy-blue-panda.sh
+        container: qc.doc_crappy-razzmatazz-cheetah
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-lime-hornet.sh
-        container: qc.doc_droopy-malachite-fousek
+        - /usr/bin/env sh .sqa/script.hilly-grey-dachsbracke.sh
+        container: qc.doc_muggy-ultramarine-akita
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-ruby-barb.sh
-        container: qc.lic_sickly-celadon-lemur
+        - /usr/bin/env sh .sqa/script.blurry-black-wolfhound.sh
+        container: qc.lic_wheezy-seashell-husky
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-celadon-kiwi.sh
-        container: qc.met_scanty-viridian-newt
-  QC.Sec:
-    repos:
-      github.com/lisc-tools/lisc bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.snazzy-ecru-beetle.sh
-        container: qc.sec_cranky-seashell-tzu
-  QC.Sty:
-    repos:
-      github.com/lisc-tools/lisc flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.hasty-cerise-moose.sh
-        container: qc.sty_beady-violet-spider
+        - /usr/bin/env sh .sqa/script.chummy-maroon-saola.sh
+        container: qc.met_shabby-sangria-newt
 timeout: 600
