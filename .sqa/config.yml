@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.3.0-alpha2
+      branch: 1.4.0-alpha
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
       branch: main
@@ -15,18 +15,18 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-violet-dolphin.sh
-        container: qc.acc_slimy-gamboge-eleuth
+        - /usr/bin/env sh .sqa/script.wiggy-puce-bongo.sh
+        container: qc.acc_sleazy-linen-balinese
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-fuchsia-mau.sh
-        container: qc.doc_squirrely-myrtle-dragonfly
+        - /usr/bin/env sh .sqa/script.shaggy-blue-labradoodle.sh
+        container: qc.doc_snazzy-ecru-dogfish
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-smalt-millipede.sh
-        container: qc.lic_scanty-scarlet-bison
+        - /usr/bin/env sh .sqa/script.snazzy-burgundy-donkey.sh
+        container: qc.lic_ready-sepia-ocelot
 timeout: 600
