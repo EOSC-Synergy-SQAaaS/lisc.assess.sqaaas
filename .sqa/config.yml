@@ -15,44 +15,18 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-dandelion-barracuda.sh
-        container: qc.acc_bumpy-grey-drever
+        - /usr/bin/env sh .sqa/script.flimsy-violet-dolphin.sh
+        container: qc.acc_slimy-gamboge-eleuth
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-lime-terrier.sh
-        container: qc.doc_scummy-magenta-wallaby
-      github.com/lisc-tools/lisc markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.lanky-brown-terrier.sh
-        container: qc.doc_nippy-emerald-eagle
-      github.com/lisc-tools/lisc restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.snoopy-amaranth-gharial.sh
-        container: qc.doc_cranky-mustard-rat
+        - /usr/bin/env sh .sqa/script.goopy-fuchsia-mau.sh
+        container: qc.doc_squirrely-myrtle-dragonfly
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-fuchsia-chamois.sh
-        container: qc.lic_smelly-harlequin-mongrel
-  QC.Met:
-    repos:
-      github.com/lisc-tools/lisc cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.shabby-taupe-scorpion.sh
-        container: qc.met_nippy-sepia-angelfish
-  QC.Sec:
-    repos:
-      github.com/lisc-tools/lisc bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.pretty-khaki-shark.sh
-        container: qc.sec_homey-harlequin-tarantula
-  QC.Sty:
-    repos:
-      github.com/lisc-tools/lisc flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.woolly-dandelion-mayfly.sh
-        container: qc.sty_nippy-chestnut-dunker
+        - /usr/bin/env sh .sqa/script.gloppy-smalt-millipede.sh
+        container: qc.lic_scanty-scarlet-bison
 timeout: 600
