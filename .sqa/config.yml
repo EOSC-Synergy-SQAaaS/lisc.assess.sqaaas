@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.4.0-alpha
+      branch: 1.3.0-alpha2
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
       branch: main
@@ -15,18 +15,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-puce-bongo.sh
-        container: qc.acc_sleazy-linen-balinese
+        - /usr/bin/env sh .sqa/script.snappy-eggplant-shark.sh
+        container: qc.acc_tasty-cream-fish
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-blue-labradoodle.sh
-        container: qc.doc_snazzy-ecru-dogfish
+        - /usr/bin/env sh .sqa/script.cheeky-razzmatazz-chamois.sh
+        container: qc.doc_sloppy-lemon-panda
+      github.com/lisc-tools/lisc markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-cream-yak.sh
+        container: qc.doc_geeky-maroon-chin
+      github.com/lisc-tools/lisc restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-firebrick-tiger.sh
+        container: qc.doc_lovely-tan-greyhound
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-burgundy-donkey.sh
-        container: qc.lic_ready-sepia-ocelot
+        - /usr/bin/env sh .sqa/script.lousy-chartreuse-lynx.sh
+        container: qc.lic_surly-green-albatross
+  QC.Met:
+    repos:
+      github.com/lisc-tools/lisc cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-green-mastiff.sh
+        container: qc.met_greasy-lime-bison
+  QC.Sec:
+    repos:
+      github.com/lisc-tools/lisc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-ecru-leopard.sh
+        container: qc.sec_gloppy-asparagus-woodpecker
+  QC.Sty:
+    repos:
+      github.com/lisc-tools/lisc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-smalt-bullfrog.sh
+        container: qc.sty_bluesy-grey-chin
 timeout: 600
