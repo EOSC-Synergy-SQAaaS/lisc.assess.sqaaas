@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.4.0-alpha
+      branch: 1.3.0-alpha3
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
       branch: main
@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-flax-barb.sh
-        container: qc.acc_frumpy-amethyst-serval
+        - /usr/bin/env sh .sqa/script.wimpy-flax-whale.sh
+        container: qc.acc_scummy-cerise-skunk
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-fuchsia-cheetah.sh
-        container: qc.doc_homey-russet-argentino
+        - /usr/bin/env sh .sqa/script.stuffy-vermilion-tortoise.sh
+        container: qc.doc_flaky-magenta-spitz
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-puce-havanese.sh
-        container: qc.doc_paltry-eggplant-urchin
+        - /usr/bin/env sh .sqa/script.gamy-chocolate-stoat.sh
+        container: qc.doc_lovely-asparagus-loon
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-salmon-starfish.sh
-        container: qc.doc_sleazy-cardinal-uakari
+        - /usr/bin/env sh .sqa/script.gimpy-wheat-moorhen.sh
+        container: qc.doc_lumpy-red-toad
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-asparagus-yak.sh
-        container: qc.lic_paltry-persimmon-bongo
+        - /usr/bin/env sh .sqa/script.dorky-saffron-angelfish.sh
+        container: qc.lic_scummy-blue-corgi
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-silver-dogfish.sh
-        container: qc.met_muzzy-copper-grouse
+        - /usr/bin/env sh .sqa/script.shabby-grey-jackal.sh
+        container: qc.met_trippy-orange-newfoundland
   QC.Sec:
     repos:
       github.com/lisc-tools/lisc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-seashell-markhor.sh
-        container: qc.sec_muzzy-mauve-harrier
+        - /usr/bin/env sh .sqa/script.shaggy-xanthic-mongrel.sh
+        container: qc.sec_cheeky-eggplant-capuchin
   QC.Sty:
     repos:
       github.com/lisc-tools/lisc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-linen-akita.sh
-        container: qc.sty_skanky-vermilion-turtle
+        - /usr/bin/env sh .sqa/script.muzzy-brown-falcon.sh
+        container: qc.sty_pokey-violet-caiman
 timeout: 600
