@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.3.0
+      branch: 1.6.0-alpha4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/lisc-tools/lisc:
       branch: main
@@ -15,44 +15,50 @@ sqa_criteria:
     repos:
       github.com/lisc-tools/lisc git:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-mauve-donkey.sh
-        container: qc.acc_greasy-cream-serval
+        - /usr/bin/env sh .sqa/script.lumpy-ochre-chow.sh
+        container: qc.acc_wiggy-ivory-koala
   QC.Doc:
     repos:
       github.com/lisc-tools/lisc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-ultramarine-woodlouse.sh
-        container: qc.doc_seedy-buff-chipmunk
+        - /usr/bin/env sh .sqa/script.skanky-linen-dog.sh
+        container: qc.doc_grumpy-magnolia-robin
       github.com/lisc-tools/lisc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-chocolate-caracal.sh
-        container: qc.doc_cheeky-cobalt-monster
+        - /usr/bin/env sh .sqa/script.squeaky-mustard-seahorse.sh
+        container: qc.doc_dorky-lime-cuscus
       github.com/lisc-tools/lisc restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-orange-devil.sh
-        container: qc.doc_freaky-blue-molly
+        - /usr/bin/env sh .sqa/script.chummy-wisteria-spaniel.sh
+        container: qc.doc_lanky-amethyst-foxhound
   QC.Lic:
     repos:
       github.com/lisc-tools/lisc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-lilac-okapi.sh
-        container: qc.lic_cloudy-violet-baboon
+        - /usr/bin/env sh .sqa/script.blurry-persimmon-dhole.sh
+        container: qc.lic_sickly-violet-affenpinscher
   QC.Met:
     repos:
       github.com/lisc-tools/lisc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-zucchini-dunker.sh
-        container: qc.met_hazy-russet-mouse
+        - /usr/bin/env sh .sqa/script.cheeky-mauve-whale.sh
+        container: qc.met_flabby-olivine-robin
   QC.Sec:
     repos:
       github.com/lisc-tools/lisc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-khaki-barnacle.sh
-        container: qc.sec_sleazy-buff-termite
+        - /usr/bin/env sh .sqa/script.jumpy-orchid-dane.sh
+        container: qc.sec_breezy-beige-chamois
   QC.Sty:
     repos:
       github.com/lisc-tools/lisc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-grey-salamander.sh
-        container: qc.sty_scummy-purple-kangaroo
+        - /usr/bin/env sh .sqa/script.silly-tomato-mandrill.sh
+        container: qc.sty_flaky-black-badger
+  QC.Ver:
+    repos:
+      github.com/lisc-tools/lisc is_semver.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-olivine-neanderthal.sh
+        container: qc.ver_ready-lilac-hare
 timeout: 600
