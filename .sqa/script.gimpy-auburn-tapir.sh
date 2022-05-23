@@ -1,4 +1,4 @@
 (
 cd github.com/lisc-tools/lisc &&
-    is_semver.py
+    get_git_tags.py
 )
